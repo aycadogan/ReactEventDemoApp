@@ -2,15 +2,18 @@
     "events": [
         {
             "title": "React Dojo",
-            "id": 1
+            "id": 1,
+            "loc": "Europe"
         },
         {
             "title": "Svelte Meetup",
-            "id": 2
+            "id": 2,
+            "loc": "Europe"
         },
         {
             "title": "Remix Launch",
-            "id": 3
+            "id": 3,
+            "loc": "America"
         }
     ]
 }
