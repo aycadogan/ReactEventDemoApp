@@ -5,7 +5,7 @@ export default function EventList({ events }){
 
     return (
         <div>
-            {events.map((event, index) => (
+            {events && events.map((event, index) => (
                 <div key={index} className={styles.card}>
                     <h2>{index} - {event.title}</h2>
                 </div>

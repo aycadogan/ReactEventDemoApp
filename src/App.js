@@ -9,7 +9,7 @@ function App() {
 
   // const [events, setEvents] = useState([])
   const [url, setUrl] = useState('http://localhost:3000/events')
-  const { data: events } = useFetch(url)
+  const { data: events,isLoading,error } = useFetch(url)
   
   // const fetchEvent = useCallback(async () => {
   //   const response = await fetch(url)
@@ -34,6 +34,11 @@ function App() {
   return (
     <div className="App">
       <h1 style={{ color: "red", paddingTop: "50px",}}>Weekend Events</h1>  
+      
+      {isLoading && <div>Loading Events...</div>}
+      {error && <div>{error}</div>}
+
+
       {events && <EventList events={events} />}
 
       <div className="filters">
